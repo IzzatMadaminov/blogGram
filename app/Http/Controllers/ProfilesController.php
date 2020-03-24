@@ -10,7 +10,8 @@ class ProfilesController extends Controller
     public function index($user)
     {
         $user = User::findorFail($user);
-        return view('home', [
+
+        return view('profiles.index', [
             'user' => $user,
         ]);
     }
