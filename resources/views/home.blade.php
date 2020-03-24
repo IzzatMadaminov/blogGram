@@ -14,9 +14,9 @@
                 <div class="pr-4"><strong>1.2k</strong> followers</div>
                 <div class="pr-4"><strong>46</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">blogGram.uz</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore doloribus perferendis vero autem ducimus, voluptas rerum cum odio veniam fugit eius deleniti nihil voluptate commodi.</div>
-            <div><a href="#">www.blogGram.uz</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
     
