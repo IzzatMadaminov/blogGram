@@ -5,12 +5,14 @@
     <div class="row">
     
         <div class="col-3 p-5">
-            <img src="https://pbs.twimg.com/profile_images/843990035431010305/KSyS7Xtu_400x400.jpg" class="rounded-circle">
+            <img src="/storage/{{ $user->profile->image }}" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user -> username }}</h1>
-                <a href="/p/create">Add New Post</a>
+                @can('update', $user->profile)
+                    <a href="/p/create">Add New Post</a>
+                @endcan           
             </div>
             @can('update', $user->profile)
                 <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
